@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AppendableStyle</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>Android-Vast-Extension</span>            </a>    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":libraries:VastTools:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="VastTools::com.ave.vastgui.tools.utils.spannablestring/AppendableStyle///PointingToDeclaration//1125336823">
+  <div class="breadcrumbs"><a href="../../index.html">VastTools</a><span class="delimiter">/</span><a href="../index.html">com.ave.vastgui.tools.utils.spannablestring</a><span class="delimiter">/</span><span class="current">AppendableStyle</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Appendable</span><wbr><span><span>Style</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AppendableStyle</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span><span class="token keyword">val </span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span><span class="token keyword">val </span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div><p class="paragraph">The append style.</p><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">0.5.1</p></span></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="535435279%2FConstructors%2F1125336823" anchor-label="AppendableStyle" id="535435279%2FConstructors%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-appendable-style.html"><span>Appendable</span><wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="535435279%2FConstructors%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">linesIndent<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/LeadingMarginSpan.Standard.html">LeadingMarginSpan.Standard</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter ">fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">quoteSpan<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/QuoteSpan.html">QuoteSpan</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter ">fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bulletSpan<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/BulletSpan.html">BulletSpan</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter ">fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">strikeMode<span class="token operator">: </span><a href="../-strike-mode/index.html">StrikeMode</a><span class="token operator"> = </span>StrikeMode.NONE<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter ">fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scriptMode<span class="token operator">: </span><a href="../-script-mode/index.html">ScriptMode</a><span class="token operator"> = </span>ScriptMode.NONE<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter ">fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">clickSpan<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/ClickableSpan.html">ClickableSpan</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter ">fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter ">fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">blurRadius<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">blur<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/BlurMaskFilter.Blur.html">BlurMaskFilter.Blur</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter ">fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>foreColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/ColorInt.html"><span class="token annotation builtin">ColorInt</span></a>&nbsp;</span>backColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span>ResUtils.getColor(R.color.transparent)<span class="token punctuation">, </span></span><span class="parameter ">fontStyle<span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a><span class="token operator"> = </span>StyleMode.NORMAL<span class="token punctuation">, </span></span><span class="parameter ">fontFamily<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontSize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fontAlign<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">proportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span><span class="token punctuation">, </span></span><span class="parameter ">xProportion<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1505364243%2FProperties%2F1125336823" anchor-label="backColor" id="-1505364243%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="back-color.html"><span>back</span><wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1505364243%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="back-color.html">backColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Color that defines the background color.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-294201526%2FProperties%2F1125336823" anchor-label="blur" id="-294201526%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blur.html"><span><span>blur</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-294201526%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="blur.html">blur</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/BlurMaskFilter.Blur.html">BlurMaskFilter.Blur</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The Blur to use.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1620136680%2FProperties%2F1125336823" anchor-label="blurRadius" id="-1620136680%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blur-radius.html"><span>blur</span><wbr><span><span>Radius</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1620136680%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="blur-radius.html">blurRadius</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">The radius to extend the blur from the original mask. Must be 0.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="365045989%2FProperties%2F1125336823" anchor-label="bulletSpan" id="365045989%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bullet-span.html"><span>bullet</span><wbr><span><span>Span</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="365045989%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="bullet-span.html">bulletSpan</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/BulletSpan.html">BulletSpan</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Defines the text bullet point.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="87278967%2FProperties%2F1125336823" anchor-label="clickSpan" id="87278967%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="click-span.html"><span>click</span><wbr><span><span>Span</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="87278967%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="click-span.html">clickSpan</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/ClickableSpan.html">ClickableSpan</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Defines the text click event.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-248960269%2FProperties%2F1125336823" anchor-label="fontAlign" id="-248960269%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="font-align.html"><span>font</span><wbr><span><span>Align</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-248960269%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="font-align.html">fontAlign</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html">Layout.Alignment</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Refer to <a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html#ALIGN_NORMAL">Alignment.ALIGN_NORMAL</a>, <a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html#ALIGN_OPPOSITE">Alignment.ALIGN_OPPOSITE</a>, <a href="https://developer.android.com/reference/kotlin/android/text/Layout.Alignment.html#ALIGN_CENTER">Alignment.ALIGN_CENTER</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="298800542%2FProperties%2F1125336823" anchor-label="fontFamily" id="298800542%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="font-family.html"><span>font</span><wbr><span><span>Family</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="298800542%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="font-family.html">fontFamily</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Refer to <a href="https://developer.android.com/reference/kotlin/android/text/style/TypefaceSpan.html">TypefaceSpan</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1839810335%2FProperties%2F1125336823" anchor-label="fontSize" id="-1839810335%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="font-size.html"><span>font</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1839810335%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="font-size.html">fontSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Set the text size to <a href="font-size.html">fontSize</a> in pixels.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1657683399%2FProperties%2F1125336823" anchor-label="fontStyle" id="1657683399%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="font-style.html"><span>font</span><wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1657683399%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="font-style.html">fontStyle</a><span class="token operator">: </span><a href="../-style-mode/index.html">StyleMode</a></div><div class="brief "><p class="paragraph">An enum constant describing the style for this text. Refer to <a href="../-style-mode/index.html">StyleMode</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-101688318%2FProperties%2F1125336823" anchor-label="foreColor" id="-101688318%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fore-color.html"><span>fore</span><wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-101688318%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="fore-color.html">foreColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Color that defines the text color.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1733991170%2FProperties%2F1125336823" anchor-label="linesIndent" id="-1733991170%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="lines-indent.html"><span>lines</span><wbr><span><span>Indent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1733991170%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="lines-indent.html">linesIndent</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/LeadingMarginSpan.Standard.html">LeadingMarginSpan.Standard</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Defines the text indentation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1212691319%2FProperties%2F1125336823" anchor-label="proportion" id="1212691319%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="proportion.html"><span><span>proportion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1212691319%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="proportion.html">proportion</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></div><div class="brief "><p class="paragraph">The proportion with which the text is scaled.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1511055619%2FProperties%2F1125336823" anchor-label="quoteSpan" id="1511055619%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="quote-span.html"><span>quote</span><wbr><span><span>Span</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1511055619%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="quote-span.html">quoteSpan</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/style/QuoteSpan.html">QuoteSpan</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Defines the text quote.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1861729917%2FProperties%2F1125336823" anchor-label="scriptMode" id="-1861729917%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="script-mode.html"><span>script</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1861729917%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="script-mode.html">scriptMode</a><span class="token operator">: </span><a href="../-script-mode/index.html">ScriptMode</a></div><div class="brief "><p class="paragraph">Defines the text as superscript or subscript.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="762990588%2FProperties%2F1125336823" anchor-label="strikeMode" id="762990588%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="strike-mode.html"><span>strike</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="762990588%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="strike-mode.html">strikeMode</a><span class="token operator">: </span><a href="../-strike-mode/index.html">StrikeMode</a></div><div class="brief "><p class="paragraph">Add a strikethrough or underline for the text.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-516881254%2FProperties%2F1125336823" anchor-label="url" id="-516881254%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="url.html"><span><span>url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-516881254%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="url.html">url</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Defines the text as url.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-360127433%2FProperties%2F1125336823" anchor-label="xProportion" id="-360127433%2FProperties%2F1125336823" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":libraries:VastTools:dokkaHtmlPartial/release" data-filterable-set=":libraries:VastTools:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="x-proportion.html"><span>x</span><wbr><span><span>Proportion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-360127433%2FProperties%2F1125336823"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":libraries:VastTools:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="x-proportion.html">xProportion</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">1.0f</span></div><div class="brief "><p class="paragraph">Values 1.0 will stretch the text wider. Values &lt; 1.0 will stretch the text narrower.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+

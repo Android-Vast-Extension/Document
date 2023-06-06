@@ -8,6 +8,7 @@ com.ave.vastgui.netstatelayout.interfaces
 com.ave.vastgui.netstatelayout.view
 module:VastTools
 com.ave.vastgui.tools.activity
+com.ave.vastgui.tools.activity.app
 com.ave.vastgui.tools.activity.result.contract
 com.ave.vastgui.tools.activity.widget
 com.ave.vastgui.tools.adapter
@@ -15,6 +16,7 @@ com.ave.vastgui.tools.bean
 com.ave.vastgui.tools.config
 com.ave.vastgui.tools.content
 com.ave.vastgui.tools.coroutines
+com.ave.vastgui.tools.datastore
 com.ave.vastgui.tools.extension
 com.ave.vastgui.tools.fragment
 com.ave.vastgui.tools.helper
@@ -34,6 +36,7 @@ com.ave.vastgui.tools.utils.drawable
 com.ave.vastgui.tools.utils.permission
 com.ave.vastgui.tools.utils.shortcut
 com.ave.vastgui.tools.utils.spannablestring
+com.ave.vastgui.tools.view.cropview
 com.ave.vastgui.tools.view.dialog
 com.ave.vastgui.tools.view.extension
 com.ave.vastgui.tools.view.progress
